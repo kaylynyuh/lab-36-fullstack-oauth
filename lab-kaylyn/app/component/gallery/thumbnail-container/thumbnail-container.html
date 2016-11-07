@@ -1,0 +1,12 @@
+<div class="thumbnail-container">
+  <h2>{{thumbnailContainerCtrl.gallery.name}}</h2>
+  <upload-pic gallery="thumbnailContainerCtrl.gallery"></upload-pic>
+  <h2> Search Pics </h2>
+  <search-bar search-term="thumbnailContainerCtrl.searchTermName"></search-bar>
+  <search-bar search-term="thumbnailContainerCtrl.searchTermDesc"></search-bar>
+  <div>
+    <thumbnail ng-repeat="item in thumbnailContainerCtrl.gallery.pics | search:thumbnailContainerCtrl.searchTermName:thumbnailContainerCtrl.searchTermDesc"
+      pic="item"
+      gallery="thumbnailContainerCtrl.gallery"></thumbnail>
+  </div>
+</div>
