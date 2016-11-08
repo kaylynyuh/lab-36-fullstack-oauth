@@ -1,6 +1,7 @@
-# slugram ignore 
+# slugram ignore
 db
-.env
+.server.env
+.client.env
 data/*
 coverage
 html-report

@@ -1,6 +1,6 @@
 'use strict'
 
-require('dotenv').load()
+require('dotenv').load({path:`${__dirname}/.client.env`})
 const webpack = require('webpack')
 const HTMLPlugin = require('html-webpack-plugin')
 const CleanPlugin = require('clean-webpack-plugin')

@@ -16,7 +16,7 @@ const galleryRouter = require('./route/gallery-router.js')
 const errorMiddleware = require('./lib/error-middleware.js')
 
 // load env vars
-dotenv.load()
+dotenv.load({path:`${__dirname}/.server.env`})
 
 // setup mongoose
 mongoose.Promise = Promise
@@ -34,6 +34,7 @@ let morganFormat = production ? 'common' : 'dev'
 app.use(morgan(morganFormat))
 
 // app routes
+app.use(express.static(`${__dirname}/build`))
 app.use(picRouter)
 app.use(authRouter)
 app.use(galleryRouter)
