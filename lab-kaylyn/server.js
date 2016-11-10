@@ -16,7 +16,7 @@ const galleryRouter = require('./route/gallery-router.js')
 const errorMiddleware = require('./lib/error-middleware.js')
 
 // load env vars
-dotenv.load({path:`${__dirname}/.server.env`})
+dotenv.load()
 
 // setup mongoose
 mongoose.Promise = Promise
